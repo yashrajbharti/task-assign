@@ -9,8 +9,9 @@ body {
   -webkit-box-align: center;
           align-items: center;
   overflow-y: scroll;
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Roboto', sans-serif;
+
 }
 body .credit {
   position: absolute;
@@ -237,9 +238,14 @@ h6{
 .user{
   top: 0;
   right: 0;
-  padding: 20px
+  padding: 20px;
+  cursor: pointer;
+}
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
 }
 .user i{
+  cursor: pointer;
   padding: 10px;
-  font-size: 25px
+  font-size: 25px;
 }
