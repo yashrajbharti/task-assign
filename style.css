@@ -11,6 +11,8 @@ body {
   overflow-y: scroll;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
+  background: url(http://www.upl.co/uploads/pickerlarge1581717808.png) no-repeat, yellow ;
+  background-size: 300px,auto;
 
 }
 body .credit {
@@ -217,6 +219,7 @@ div.u-card{
 .showcase{
   top: 0;
   font-size: 32px;
+
 }
 .options{
   transform: translateY(40vh);
@@ -231,15 +234,18 @@ h1,h6,h3{
 
 }
 h6{
-  color: grey;
+  color: #111;
   font-weight: lighter;
   padding: 0 20px;
+
+
 }
 .user{
   top: 0;
   right: 0;
   padding: 20px;
   cursor: pointer;
+  background: rgba(255, 0, 0, 0.5);
 }
 ::selection {
   background: #ffb7b7; /* WebKit/Blink Browsers */
@@ -440,4 +446,8 @@ input {
 
 .addBtn:hover {
   background-color: #bbb;
+}
+.bold2{
+  font-size: 33px;
+  font-weight: bold;
 }
