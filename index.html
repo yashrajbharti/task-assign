@@ -94,14 +94,117 @@
             <div class="modal-header">
               <span class="closeBtn">&times;</span>
 
-              <h2>Starbucks</h2>
+              <h2>Meeting Minutes</h2>
             </div>
             <div class="modal-body">
-            <p>Hello, so which coffee you want!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+<p><strong>Title:</strong> Meeting<br>
+<strong>Date:</strong> Day 00/00/2016<br>
+<strong>Time:</strong> 00:00AM - 00:00PM<br>
+<strong>Location:</strong> Room</p>
+<hr>
+
+<p><strong>Heading Ordered list</strong></p>
+<ol>
+<li>Item</li>
+<li>Item</li>
+<li>Item</li>
+</ol>
+<p><strong>Task Assigned to Invitees</strong></p>
+<p>A assigned to <span class="bold">abc@gmail.com</span></p>
+<p>B assigned to <span class="bold">efg@gmail.com</span></p>
+<style media="screen">
+hr {
+  background-color: #bbb;
+  height: 2px;
+  border: none;
+}
+hr:nth-child(3) {
+  background-color: #09c;
+  height: 2px;
+  border: none;
+}
+
+</style>
+
+
+    <div id="myDIV" class="header">
+      <h2 style="margin:5px; font-weight:lighter;">Add Something</h2>
+      <input type="text" id="myInput" placeholder="Title...">
+      <span onclick="newElement()" class="addBtn">Add Task</span>
+    </div>
+
+    <ul id="myUL">
+      <li>Study Keras</li>
+      <li class="checked">Tensorflow basic</li>
+      <li>Learn backpropagation</li>
+      <li>Make a basic model</li>
+      <li>Read some book</li>
+      <li>Watch AK Bhadesia's Lectures</li>
+    </ul>
+
+    <script>
+    // Create a "close" button and append it to each list item
+    var myNodelist = document.getElementsByTagName("LI");
+    var i;
+    for (i = 0; i < myNodelist.length; i++) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      myNodelist[i].appendChild(span);
+    }
+
+    // Click on a close button to hide the current list item
+    var close = document.getElementsByClassName("close");
+    var i;
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+        var div = this.parentElement;
+        div.style.display = "none";
+      }
+    }
+
+    // Add a "checked" symbol when clicking on a list item
+    var list = document.querySelector('ul');
+    list.addEventListener('click', function(ev) {
+      if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+      }
+    }, false);
+
+    // Create a new list item when clicking on the "Add" button
+    function newElement() {
+      var li = document.createElement("li");
+      var inputValue = document.getElementById("myInput").value;
+      var t = document.createTextNode(inputValue);
+      li.appendChild(t);
+      if (inputValue === '') {
+        alert("You must write something!");
+      } else {
+        document.getElementById("myUL").appendChild(li);
+      }
+      document.getElementById("myInput").value = "";
+
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      li.appendChild(span);
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
+    }
+    </script>
+
             </div>
             <div class="modal-footer">
-              <h3>all rights reserved</h3>
+              <h3>By Let's Meet</h3>
             </div>
         </div>
       </div>
