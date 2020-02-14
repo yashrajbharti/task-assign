@@ -8,7 +8,7 @@ body {
           justify-content: center;
   -webkit-box-align: center;
           align-items: center;
-  overflow: hidden;
+  overflow-y: scroll;
   height: 100vh;
   font-family: 'Roboto', sans-serif;
 }
@@ -212,4 +212,25 @@ div.u-card{
 }
 .bold{
   font-weight: bold;
+}
+.showcase{
+  top: 0;
+  font-size: 32px;
+}
+.options{
+  transform: translateY(40vh);
+margin-bottom: 60px;
+}
+h1,h6,h3{
+  text-align:center;
+}
+
+h3{
+  transform: translateY(10vh);
+
+}
+h6{
+  color: grey;
+  font-weight: lighter;
+  padding: 0 20px;
 }
