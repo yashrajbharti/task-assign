@@ -255,13 +255,18 @@ div.modal-content{
   line-height: 1.6em;
 }
 .button0{
-  background-color: #00704a;
-  padding: 1em 2em;
-  color:#fff;
+  background-color: #69f0ae;
+  border-radius: 500px;
+  text-transform: capitalize;
+  padding: 0.7em 1.6em;
+  color:#262b3a;
+  font-weight: bold;
   border:0;
 }
 .button0:hover{
   background-color: #333;
+  color: #fff;
+  font-weight: bold;
 }
 /*POP UP NOTIFICATION*/
 .modal, .modalB,  .modalC, .modalD, .modalE{
